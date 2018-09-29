@@ -1,6 +1,6 @@
 const runCheck = require('./run-check')
 
-const ID = 'vue-cli:generate-icons-plugin'
+const ID = 'vue-cli:es-check-plugin'
 
 module.exports = class EsCheckPlugin {
   constructor({ pattern }) {
