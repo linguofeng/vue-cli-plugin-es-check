@@ -6,10 +6,15 @@ module.exports = (api, options) => {
     usage: 'vue-cli-service es-check',
   }, async () => {
     const cmd = `es-check es5 ${options.outputDir}/js/*.js >&2`
-    const { code, stderr } = await shellExec(cmd)
 
-    if (code !== 0) {
-      throw new Error(stderr)
+    try {
+      const { code, stderr } = await shellExec(cmd)
+
+      if (code !== 0) {
+        throw new Error(stderr)
+      }
+    } catch (err) {
+      throw new Error(err)
     }
   })
 }
