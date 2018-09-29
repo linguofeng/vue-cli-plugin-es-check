@@ -1,10 +1,28 @@
 {
-  "name": "@crosscountryapp/vue-cli-plugin-es-check",
+  "name": "vue-cli-plugin-es-check",
   "version": "1.1.0",
   "description": "check built files are a specific version of ES",
   "main": "index.js",
   "dependencies": {
     "es-check": "^4.0.0",
     "shell-exec": "^1.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diachedelic/vue-cli-plugin-es-check.git"
+  },
+  "keywords": [
+    "vue",
+    "cli",
+    "es5"
+  ],
+  "author": "James Diacono",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/diachedelic/vue-cli-plugin-es-check/issues"
+  },
+  "homepage": "https://github.com/diachedelic/vue-cli-plugin-es-check",
+  "publishConfig": {
+    "access": "public"
   }
 }
