@@ -14,7 +14,7 @@ module.exports = (api, options) => {
         throw new Error(stderr)
       }
     } catch (err) {
-      throw new Error(err)
+      throw err
     }
   })
 }
