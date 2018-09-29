@@ -1,5 +1,23 @@
 # vue-cli-plugin-es-check
 
-Check built & bundled JS is strictly es5.
+Check bundled JS is strictly es5.  
 
-Automatically run after `vue-cli-service build`, but you can also run it as a command: `npx vue-cli-service es-check`.
+Helps you keep your `transpileDependencies` property in `vue.config.js` up to date.
+
+## Installation
+
+```
+vue add es-check
+```
+
+Check will automatically be run after build (`vue-cli-service build`).
+
+## Running manually
+
+```
+npx vue-cli-service es-check
+```
+
+## Configuration
+
+Currently has no configuration options, just runs `es-check es5 'dist/js/*.js'`.
