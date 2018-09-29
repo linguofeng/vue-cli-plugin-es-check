@@ -1,6 +1,6 @@
 {
   "name": "vue-cli-plugin-es-check",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "check built files are a specific version of ES",
   "main": "index.js",
   "dependencies": {
