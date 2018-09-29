@@ -1,6 +1,6 @@
 {
   "name": "@crosscountryapp/vue-cli-plugin-es-check",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "check built files are a specific version of ES",
   "main": "index.js",
   "dependencies": {
