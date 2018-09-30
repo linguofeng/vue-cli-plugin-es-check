@@ -5,7 +5,7 @@ version on your bundled JS.
 
 Helps you keep your `transpileDependencies` property in `vue.config.js` up to date.
 
-By default, files that are "modern" are not checked (i.e. non-legacy bundles produced using `vue-cli-service build --modern`).
+By default, files that are "modern" are not checked (i.e. non-legacy bundles produced using `vue-cli-service build --modern`).  Only runs in `production` mode.
 
 ## Installation
 

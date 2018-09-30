@@ -26,15 +26,10 @@ module.exports = class EsCheckPlugin {
 
       if (!relativeGlobs) {
         // use sensible defaults if files not specified
-        if (['production', 'test'].includes(process.env.NODE_ENV)) {
-          relativeGlobs = [
-            `js/chunk-*${legacyFlag}.*.js`,
-            `js/app${legacyFlag}.*.js`,
-          ]
-        } else {
-          // development
-          relativeGlobs = [`app${legacyFlag}.js`]
-        }
+        relativeGlobs = [
+          `js/chunk-*${legacyFlag}.*.js`,
+          `js/app${legacyFlag}.*.js`,
+        ]
       }
 
       const fileGlobs = relativeGlobs

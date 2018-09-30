@@ -8,7 +8,12 @@ module.exports = (api, options) => {
     }
 
     webpackConfig
-      .plugin('es-check')
-      .use(EsCheckPlugin, [options])
+      // only support production mode, otherwise this plugin breaks
+      // `vue-cli-service serve`
+      .when(process.env.NODE_ENV === 'production', config => {
+        config
+          .plugin('es-check')
+          .use(EsCheckPlugin, [options])
+      })
   })
 }
