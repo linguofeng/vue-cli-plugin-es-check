@@ -1,8 +1,11 @@
 # vue-cli-plugin-es-check
 
-Check bundled JS is strictly es5.  
+Uses [es-check](https://www.npmjs.com/package/es-check) to enforce a maximum ES
+version on your bundled JS.
 
 Helps you keep your `transpileDependencies` property in `vue.config.js` up to date.
+
+By default, files that are "modern" are not checked (i.e. non-legacy bundles produced using `vue-cli-service build --modern`).
 
 ## Installation
 
@@ -10,14 +13,28 @@ Helps you keep your `transpileDependencies` property in `vue.config.js` up to da
 vue add es-check
 ```
 
-Check will automatically be run after build (`vue-cli-service build`).
-
-## Running manually
-
-```
-npx vue-cli-service es-check
-```
+Check will automatically be run after `vue-cli-service build`.
 
 ## Configuration
 
-Currently has no configuration options, just runs `es-check es5 'dist/js/*.js'`.
+All config is optional.
+
+```
+// vue.config.js
+{
+  pluginOptions: {
+    esCheck: {
+      // [optional] uses sensible defaults if not set
+      files: [
+        // array of file patterns in glob style
+        'js/chunk-vendor.*.js',
+        'js/chunk-other.*.js',
+        'js/app.*.js',
+      ],
+
+      // [optional] default: es5
+      esVersion: 'es5'
+    }
+  }
+}
+```
