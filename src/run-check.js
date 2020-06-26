@@ -3,7 +3,7 @@ const shellExec = require('shell-exec')
 // `fileGlobs` should be an array of glob-style file patterns to check
 module.exports = async ({ fileGlobs, esVersion = 'es5' }) => {
   const globArgs = fileGlobs.join(' ')
-  const cmd = `es-check ${esVersion} ${globArgs}`
+  const cmd = `npx es-check ${esVersion} ${globArgs}`
 
   console.log(cmd)
 
